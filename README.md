@@ -13,6 +13,13 @@ A focused product search and filtering experience built with Next.js, TypeScript
 - **English and LTR presentation** keep the interface natural for English-speaking users, with the sidebar on the left and table columns ordered from left to right.
 - **Responsive presentation** keeps the filters and results usable on narrow screens.
 
+- **Search Performance and Scaling** The demo filters its locally loaded product dataset immediately. It does not use `debounce` or React's `useDeferredValue`: the benchmark measured an average broad-search time of about 6 ms and a combined-filter time of about 5 ms across 100,000 products on the test machine. At that scale and measured cost, adding delayed or deferred updates was not necessary.
+
+These techniques do not remove the underlying filtering work. Debouncing reduces how often a search runs; `useDeferredValue` lets React prioritize urgent UI updates while the filtering result catches up.
+
+Each full client-side filtering pass scans the product collection, so its time complexity is **O(N)** in the number of products; text matching adds work based on the product name and query length.
+
+For a production catalog with much larger datasets, filtering and pagination should be handled through a server API. The API should return only the requested page of matching products, backed by database indexes suited to the filters and search behavior. Virtualization can reduce the number of rendered rows in the browser, but it does not reduce the cost of scanning all client-side records
 ## Project structure
 
 ```text
