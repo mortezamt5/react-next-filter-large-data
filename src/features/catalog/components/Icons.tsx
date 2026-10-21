@@ -1,9 +1,10 @@
 import type { ReactNode, SVGProps } from "react";
 
-type IconName = "grid" | "package" | "chart" | "settings" | "search" | "sliders" | "refresh" | "chevron" | "spark" | "arrow";
+type IconName = "grid" | "list" | "package" | "chart" | "settings" | "search" | "sliders" | "refresh" | "chevron" | "spark" | "arrow";
 
 const paths: Record<IconName, ReactNode> = {
   grid: <><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></>,
+  list: <><path d="M9 6h11M9 12h11M9 18h11" /><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" strokeWidth="2.8" /></>,
   package: <><path d="m12 3 8.5 4.5v9L12 21l-8.5-4.5v-9L12 3Z" /><path d="m3.8 7.7 8.2 4.5 8.2-4.5M12 12.2V21M7.7 5.2l8.6 4.6" /></>,
   chart: <><path d="M4 19V5M4 19h16" /><path d="m7 15 3.3-4 3 2 4.7-6" /></>,
   settings: <><circle cx="12" cy="12" r="3" /><path d="m19.4 15 .1.1 1 1.7-1.8 3-2-.5a7.7 7.7 0 0 1-1.7 1l-.6 1.7h-3.6l-.6-1.8a7.7 7.7 0 0 1-1.7-1l-2 .6-1.8-3 1.1-1.7a7.2 7.2 0 0 1 0-2l-1.1-1.7 1.8-3 2 .6a7.7 7.7 0 0 1 1.7-1l.6-1.8h3.6l.6 1.8a7.7 7.7 0 0 1 1.7 1l2-.6 1.8 3-1.1 1.7a7.2 7.2 0 0 1 0 2Z" transform="translate(-1 -1) scale(1.08)" /></>,

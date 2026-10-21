@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Noa | Product Catalog",
+  title: "Product Catalog",
   description: "Search and manage a catalog of 100,000 healthcare products.",
 };
 

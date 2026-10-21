@@ -99,10 +99,9 @@ export function CatalogWorkspace() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <a className="brand" href="#overview" aria-label="Noa home">
+        <a className="brand" href="#overview" aria-label="home">
           <span className="brand-symbol"><span /></span>
           <span className="brand-copy">
-            <strong>NOA</strong>
             <small>PRODUCT STUDIO</small>
           </span>
         </a>
@@ -125,13 +124,6 @@ export function CatalogWorkspace() {
         </nav>
 
         <div className="sidebar-spacer" />
-
-        <div className="side-note">
-          <span className="side-note-icon"><Icon name="spark" /></span>
-          <strong>Make room for clarity.</strong>
-          <p>A calmer way to find the right product.</p>
-          <a href="#catalog">Browse catalog <Icon name="arrow" /></a>
-        </div>
 
         <div className="sidebar-profile">
           <span className="profile-avatar">N</span>
@@ -263,7 +255,7 @@ export function CatalogWorkspace() {
             </footer>
           </section>
 
-          <footer className="page-footer"><span>Designed for a better search experience</span><span>NOA <i /> 2026</span></footer>
+          <footer className="page-footer"><span>Designed for a better search experience</span><span> <i /> 2026</span></footer>
         </div>
       </main>
     </div>
