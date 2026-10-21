@@ -1,4 +1,4 @@
-# Snapp Doctor Product Catalog
+# Product Catalog
 
 A focused product search and filtering experience built with Next.js, TypeScript, and a virtualized results list. The catalog creates 100,000 realistic mock products in the browser and keeps search and filtering client-side.
 
@@ -10,9 +10,7 @@ A focused product search and filtering experience built with Next.js, TypeScript
 - **Pure, single-pass filtering** combines a case-insensitive name search with category, price, and availability filters. The current controls drive the result directly, which avoids delayed results from a separate asynchronous state pipeline.
 - **Virtualized rendering** uses `@tanstack/react-virtual` to render only the visible product rows and a small overscan. Filtering still checks the dataset, but the browser does not create 100,000 DOM rows.
 - **Native React state and CSS** are sufficient for this single screen. The project avoids a separate state library, a search dependency, and a styling framework.
-- **English and LTR presentation** keep the interface natural for English-speaking users, with the sidebar on the left and table columns ordered from left to right.
 - **Responsive presentation** keeps the filters and results usable on narrow screens.
-
 - **Search Performance and Scaling** The demo filters 100,000 locally loaded products in real time, averaging 6 ms for broad searches and 5 ms for combined filters on the test machine. Therefore, debounce and useDeferredValue were unnecessary.
 - Time complexity: \(O(N)\) per filtering pass, where \(N\) is the number of products.
 - Virtualization: Reduces rendered DOM elements but does not reduce the cost of scanning all products.
@@ -86,5 +84,10 @@ Environment: Windows 11 build 26300, Node.js 24.19.0, 12th Gen Intel Core i7-125
 Record the runtime, OS, processor, dataset size, and benchmark mode whenever you publish measurements. Treat Node.js results as an algorithm baseline: browser responsiveness and rendered memory should also be checked in the target browser and device.
 
 ## AI usage
+OpenAI Codex was used to assist with architecture planning, implementation, UI design, and code review.
+- **Project instructions**: AGENTS.md defines project-wide engineering standards and development guidelines.
+- **Reusable skills**: senior-frontend-engineer guides frontend architecture, React/Next.js best practices, performance, and code quality. professional-ui-ux guides visual design, usability, responsiveness, and accessibility.
+- **Role-based prompting**: Codex was guided to approach tasks from senior frontend engineering and professional UI/UX perspectives.
+- **Review and validation**: Generated code was evaluated against the requirements, with applicable quality checks used to verify the implementation.
 
-OpenAI Codex was used to shape the initial architecture and file structure, implement the first catalog UI and filtering flow, and draft this README. It assisted with translating the task requirements into a small feature-based Next.js application and a custom responsive visual system. The implementation is intended to be reviewed and understood by the submitting developer; generated code should be checked against the requirements and explained during evaluation.
+The developer retained responsibility for technical decisions and the final deliverable.
