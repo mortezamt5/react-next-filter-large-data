@@ -2,6 +2,8 @@
 
 A focused product search and filtering experience built with Next.js, TypeScript, and a virtualized results list. The catalog creates 100,000 realistic mock products in the browser and keeps search and filtering client-side.
 
+- **Live Demo**: https://react-next-filter-large-data.vercel.app 
+
 ## Architecture decisions
 
 - **Next.js App Router** provides a small, familiar application shell. The route and metadata stay server-rendered, while the catalog workspace owns the interactive client state.
